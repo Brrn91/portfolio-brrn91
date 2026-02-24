@@ -43,8 +43,7 @@ The design was structured in Figma before development to ensure visual consisten
 
 This project was designed in Figma before development:
 
-Figma Design:  
-<https://figma.com/design/FISyr6f6FmAGLXduDs1OwQ/Portifólio---Lucas-Bruno>
+- [Figma Design](https://www.figma.com/design/FISyr6f6FmAGLXduDs1OwQ/Portif%C3%B3lio---Lucas-Bruno?node-id=0-1&t=t78T0iAQ9gHhPoZM-1)
 
 ---
 

@@ -44,8 +44,7 @@ O layout foi estruturado no Figma antes do desenvolvimento, garantindo organiza√
 
 Este projeto foi inicialmente planejado no Figma:
 
-Figma Design:  
-<https://figma.com/design/FISyr6f6FmAGLXduDs1OwQ/Portif√≥lio---Lucas-Bruno>
+- [Figma Design](https://www.figma.com/design/FISyr6f6FmAGLXduDs1OwQ/Portif%C3%B3lio---Lucas-Bruno?node-id=0-1&t=t78T0iAQ9gHhPoZM-1)
 
 ---
 
