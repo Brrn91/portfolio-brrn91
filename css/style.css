@@ -110,7 +110,7 @@ main {
 }
 
 section#ficha {
-  height: 525px;
+  height: 500px;
   width: 300px;
   padding: 38px;
   grid-column: 2;
@@ -155,7 +155,7 @@ section#detalhes {
 
 article {
   width: 790px;
-  height: 390px;
+  height: 450px;
   padding: 50px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
@@ -187,7 +187,11 @@ article h2 {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-main);
-  padding-bottom: 6px;
+  padding-left: 8px;
+}
+
+span.title {
+  padding-left: 8px;
 }
 
 #skill-container .porcentagem {
