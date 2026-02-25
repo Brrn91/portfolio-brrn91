@@ -102,6 +102,36 @@ nav#menu i {
   font-size: 1.1rem;
 }
 
+main {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+section#ficha {
+  padding: 38px;
+  border-radius: 16px;
+  grid-column: 2;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+section#ficha img.foto {
+  width: 157px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  outline: 3px solid var(--bg-body);
+}
+
 /* --- Responsividade --- */
 
 @media (max-width: 768px) {
