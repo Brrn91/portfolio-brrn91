@@ -1,74 +1,152 @@
 /* Fonte */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* ícones */
-
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
-  --bg-dark: #161616;
-  --footer-nav: #1D1D1D;
-  --letras-dark: #FFFFFF;
-  --letras-dark-2: #B5B5B5;
+  --bg-body: #161616;
+  --bg-nav: #1D1D1D;
+  --text-main: #FFFFFF;
+  --text-muted: #B5B5B5;
+  --accent: #0066CC;
+  --transition-speed: 0.3s;
+}
 
-  --bg-light: #939393;
-  --footer-nav-light: #B5B5B5;
-  --letras-light: #161616;
-  --letras-light-2: #3E3E3E;
+body.light {
+  --bg-body: #F4F4F9;
+  --bg-nav: #FFFFFF;
+  --text-main: #1A1A1B;
+  --text-muted: #575757;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+}
+
+body,
+header,
+a,
+i {
+  transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--bg-dark);
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed);
+}
+
+/* Header e Navegação Principal */
+header {
+  background-color: var(--bg-nav);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  bottom: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
-  height: 40px;
-  background-color: var(--footer-nav);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-ul {
-  width: 520px;
+nav#menu ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+nav#menu a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-speed) ease;
+  border-bottom: 2px solid transparent;
+}
+
+nav#menu a:hover {
+  color: var(--text-main);
+  border-bottom: 2px solid var(--text-main);
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+nav#menu ul {
+  max-width: 600px;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-
+  gap: 15px;
 }
 
-nav>ul>li {
+nav#menu li {
   list-style: none;
-  color: var(--letras-dark-2);
-  font-weight: 500;
 }
 
-nav>ul>li>a {
-  text-decoration: none;
-  color: var(--letras-dark-2);
+nav#menu i {
+  margin-right: 8px;
+  font-size: 1.1rem;
 }
 
-nav>ul>li>i {
-  color: var(--letras-dark-2);
-  padding-right: 4px;
-  font-size: 20px;
-}
+/* --- Responsividade --- */
 
-.nav {
-  cursor: pointer;
-  color: var(--letras-dark);
-  font-weight: 600;
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    /* Mantém o menu sempre visível no rodapé */
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    /* Altura maior para facilitar o toque */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  body {
+    /* Evita que o menu mobile cubra o conteúdo final da página */
+    padding-bottom: 80px;
+    padding-top: 0;
+  }
+
+  body.light header {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  nav#menu ul {
+    width: 100%;
+    justify-content: space-around;
+    /* Distribui ícones igualmente */
+    gap: 0;
+  }
+
+  nav#menu a {
+    flex-direction: column;
+    /* Ícone em cima do texto */
+    font-size: 10px;
+    /* Texto menor para mobile */
+    padding: 5px;
+    gap: 4px;
+  }
+
+  nav#menu i {
+    font-size: 22px;
+    /* Ícone em destaque */
+    margin-right: 0;
+  }
+
 }
